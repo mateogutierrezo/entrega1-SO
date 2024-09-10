@@ -19,7 +19,7 @@ public class Buffer
 
     public void Insert(int value)
     {
-        if (cant < capacity)
+        if (cant < capacity 
         {
             array[pIn] = value;
             pIn = (pIn + 1) % capacity;
@@ -27,20 +27,20 @@ public class Buffer
         }
         else
         {
-            Console.WriteLine("El buffer está lleno");
+            Console.WriteLine("El buffer está lleno.");
         }
     }
 
     public int Devolver()
     {
-        if (cant > 0)
+        if (cant > 0) 
         {
             int value = array[pOut];
             pOut = (pOut + 1) % capacity;
             cant--;
             return value;
         }
-        else
+        else 
         {
             Console.WriteLine("Buffer vacío. No hay elementos para remover.");
             return -1;
