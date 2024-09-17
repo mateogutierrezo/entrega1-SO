@@ -4,12 +4,15 @@ public class Consumidor
 {
     public void Consumir(Buffer buffer, Semaforo s, Semaforo e, Semaforo n)
     {
-        n.P();
-        s.P();
-        int value = buffer.Devolver();
-        Console.WriteLine("Consumido: " + value);
-        s.V();
-        e.V();
+        while (true)
+        {
+            n.P();
+            s.P();
+            int value = buffer.Devolver();
+            s.V();
+            e.V();
+            Thread.Sleep(1000); // Tiempo de espera para evitar saturación
+        }
     }
 }
 
