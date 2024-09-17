@@ -23,7 +23,7 @@ public class Buffer
         {
             array[pIn] = value;
             pIn = (pIn + 1) % capacity;
-            cant++;
+            this.cant++;
         }
         else
         {
@@ -45,5 +45,10 @@ public class Buffer
             Console.WriteLine("Buffer vacío. No hay elementos para remover.");
             return -1;
         }
+    }
+
+    public int getCant()
+    {
+        return this.cant;
     }
 }

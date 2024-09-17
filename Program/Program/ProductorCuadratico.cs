@@ -3,22 +3,22 @@ namespace Program;
 public class ProductorCuadratico
 {
     private int dato;
-    public void ElevarAlCuadrado(Buffer buffer, Semaforo s, Semaforo e, Semaforo n)
+    public void ElevarAlCuadrado(Buffer buffer,  Semaphore s,  Semaphore e,  Semaphore n)
     {
         while (true)
         {
-            n.P();
-            s.P();
+            n.WaitOne();
+            s.WaitOne();
             this.dato= buffer.Devolver();
-            s.V();
-            e.V();
-            e.P();
-            s.P();
+            s.Release();
+            e.Release();
+            e.WaitOne();
+            s.WaitOne();
             dato = dato * dato;
             buffer.Insert(dato);
             Console.WriteLine("se elevo al cuadrado");
-            s.V();
-            n.V();
+            s.Release();
+            n.Release();
             Thread.Sleep(1000); // Tiempo de espera para evitar saturation
         }
         

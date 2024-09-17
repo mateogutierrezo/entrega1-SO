@@ -2,12 +2,12 @@ namespace Program;
 
 public class Productor
 {
-    public void Producir(Buffer buffer, Semaforo s, Semaforo e, Semaforo n)
+    public void Producir(Buffer buffer,  Semaphore s,  Semaphore e,  Semaphore n)
     {
         while (true)
         {
-            e.P();
-            s.P();
+            e.WaitOne();
+            s.WaitOne();
             try
             {
                 // Pide al usuario que introduzca un valor
@@ -17,11 +17,12 @@ public class Productor
 
                 // Inserta el valor en el buffer
                 buffer.Insert(numero);
+                Console.WriteLine(buffer.getCant());
             }
             finally
             {
-                s.V();
-                n.V();
+                s.Release();
+                n.Release();
                 Thread.Sleep(1000); // Tiempo de espera para evitar saturación
             }
         }

@@ -2,29 +2,29 @@ namespace Program;
 
 public class ProductorConsumidor
 {
-   public void ConsumirProducir(Buffer buffer1,Buffer buffer2,Semaforo s1,Semaforo s2, Semaforo e1,Semaforo e2, Semaforo n1, Semaforo n2)
+   public void ConsumirProducir(Buffer buffer1,Buffer buffer2, Semaphore s1, Semaphore s2,  Semaphore e1, Semaphore e2,  Semaphore n1, Semaphore n2)
    {
-       int aux = 0;
+      
         while (true)
         {
-            aux++;
-            n1.P();
-            s1.P();
+            
+            n1.WaitOne();
+            s1.WaitOne();
             int dato1 = buffer1.Devolver();
-            s1.V();
-            e1.V();
-            n1.P();
-            s1.P();
+            s1.Release();
+            e1.Release();
+            n1.WaitOne();
+            s1.WaitOne();
             int dato2 = buffer1.Devolver();
-            s1.V();
-            e1.V();
-            e2.P();
-            s2.P();
+            s1.Release();
+            e1.Release();
+            e2.WaitOne();
+            s2.WaitOne();
             int valor = dato1+dato2;
             buffer2.Insert(valor);
-            Console.WriteLine("se inserto en el buffer 2 {0}",aux);
-            s2.V();
-            n2.V();
+            Console.WriteLine("se inserto en el buffer 2 el numero {0}",valor);
+            s2.Release();
+            n2.Release();
             Thread.Sleep(1000); // Tiempo de espera para evitar saturación
         }
        
