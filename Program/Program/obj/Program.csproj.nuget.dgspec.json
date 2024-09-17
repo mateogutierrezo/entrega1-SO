@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\entrega1-SO\\Program\\Program\\Program.csproj": {}
+    "C:\\Repositorios\\entrega1-SO\\Program\\Program\\Program.csproj": {}
   },
   "projects": {
-    "C:\\repos\\entrega1-SO\\Program\\Program\\Program.csproj": {
+    "C:\\Repositorios\\entrega1-SO\\Program\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\entrega1-SO\\Program\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Repositorios\\entrega1-SO\\Program\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "C:\\repos\\entrega1-SO\\Program\\Program\\Program.csproj",
-        "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\entrega1-SO\\Program\\Program\\obj\\",
+        "projectPath": "C:\\Repositorios\\entrega1-SO\\Program\\Program\\Program.csproj",
+        "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\entrega1-SO\\Program\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
