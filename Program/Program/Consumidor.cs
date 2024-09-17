@@ -2,15 +2,15 @@ namespace Program;
 
 public class Consumidor
 {
-    public void Consumir(Buffer buffer, Semaforo s, Semaforo e, Semaforo n)
+    public void Consumir(Buffer buffer,  Semaphore s,  Semaphore e,  Semaphore n)
     {
         while (true)
         {
-            n.P();
-            s.P();
+            n.WaitOne();
+            s.WaitOne();
             int value = buffer.Devolver();
-            s.V();
-            e.V();
+            s.Release();
+            e.Release();
             Thread.Sleep(1000); // Tiempo de espera para evitar saturación
         }
     }
