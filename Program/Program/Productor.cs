@@ -17,7 +17,6 @@ public class Productor
 
                 // Inserta el valor en el buffer
                 buffer.Insert(numero);
-                Console.WriteLine(buffer.getCant());
             }
             finally
             {

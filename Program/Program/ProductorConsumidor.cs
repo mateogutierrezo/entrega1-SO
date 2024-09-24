@@ -27,6 +27,5 @@ public class ProductorConsumidor
             n2.Release();
             Thread.Sleep(1000); // Tiempo de espera para evitar saturación
         }
-       
-    }
+   }
 }
