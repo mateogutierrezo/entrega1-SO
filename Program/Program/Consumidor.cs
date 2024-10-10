@@ -8,10 +8,11 @@ public class Consumidor
         {
             n.WaitOne();
             s.WaitOne();
-            int value = buffer.Devolver();
+            int value = buffer.Extraer();
             s.Release();
             e.Release();
-            Thread.Sleep(1000); // Tiempo de espera para evitar saturación
+            
+            Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
     }
 }

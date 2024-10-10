@@ -4,15 +4,16 @@
     {
         public static void Main()
         {
+            int capacidad = 50;
             // Crear semáforos para los buffers
-            Buffer buffer1 = new Buffer(50);
-            Buffer buffer2 = new Buffer(50);
+            Buffer buffer1 = new Buffer(capacidad);
+            Buffer buffer2 = new Buffer(capacidad);
             Semaphore s1 = new Semaphore(1, 1);
-            Semaphore e1 = new Semaphore(50, 50);
-            Semaphore n1 = new Semaphore(0, 50);
+            Semaphore e1 = new Semaphore(capacidad, capacidad);
+            Semaphore n1 = new Semaphore(0, capacidad);
             Semaphore s2 = new Semaphore(1, 1);
-            Semaphore e2 = new Semaphore(50, 50);
-            Semaphore n2 = new Semaphore(0, 50);
+            Semaphore e2 = new Semaphore(capacidad, capacidad);
+            Semaphore n2 = new Semaphore(0, capacidad);
             
           // Crear instancias de productores y consumidores
             Productor productor1 = new Productor();

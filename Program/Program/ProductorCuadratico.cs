@@ -9,17 +9,20 @@ public class ProductorCuadratico
         {
             n.WaitOne();
             s.WaitOne();
-            this.dato= buffer.Devolver();
+            dato = buffer.Extraer();
             s.Release();
             e.Release();
+            
+            int cuadrado = dato * dato; // Produce (asíncrono)
+            
             e.WaitOne();
             s.WaitOne();
-            dato = dato * dato;
-            buffer.Insert(dato);
-            Console.WriteLine("se elevo al cuadrado");
+            buffer.Insert(cuadrado);
+            Console.WriteLine("Se elevo " + dato + " al cuadrado y se inserto " + cuadrado);
             s.Release();
             n.Release();
-            Thread.Sleep(1000); // Tiempo de espera para evitar saturation
+            
+            Thread.Sleep(500); // Tiempo de espera para evitar saturation
         }
         
     }

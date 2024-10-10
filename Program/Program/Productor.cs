@@ -6,24 +6,14 @@ public class Productor
     {
         while (true)
         {
+            Random rnd = new Random();
+            int elemento = rnd.Next(1, 30); 
             e.WaitOne();
             s.WaitOne();
-            try
-            {
-                // Pide al usuario que introduzca un valor
-                Console.Write("Introduce un valor: ");
-                string numeroString = Console.ReadLine();
-                int numero = int.Parse(numeroString);
-
-                // Inserta el valor en el buffer
-                buffer.Insert(numero);
-            }
-            finally
-            {
-                s.Release();
-                n.Release();
-                Thread.Sleep(1000); // Tiempo de espera para evitar saturación
-            }
+            buffer.Insert(elemento);
+            s.Release();
+            n.Release();
+            Thread.Sleep(1000); // Tiempo de espera para evitar saturación
         }
     }
 }

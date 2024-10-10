@@ -28,3 +28,18 @@ C:\repos\entrega1-SO\Program\Program\obj\Debug\net8.0\refint\Program.dll
 C:\repos\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.pdb
 C:\repos\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
 C:\repos\entrega1-SO\Program\Program\obj\Debug\net8.0\ref\Program.dll
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\bin\Debug\net8.0\Program.exe
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\bin\Debug\net8.0\Program.deps.json
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\bin\Debug\net8.0\Program.runtimeconfig.json
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\bin\Debug\net8.0\Program.dll
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\bin\Debug\net8.0\Program.pdb
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.AssemblyInfoInputs.cache
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.AssemblyInfo.cs
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.csproj.CoreCompileInputs.cache
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.sourcelink.json
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.dll
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\refint\Program.dll
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.pdb
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
+G:\Mi unidad\Sistemas\entrega1-SO\Program\Program\obj\Debug\net8.0\ref\Program.dll

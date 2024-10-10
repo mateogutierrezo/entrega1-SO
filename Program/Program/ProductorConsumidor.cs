@@ -2,30 +2,32 @@ namespace Program;
 
 public class ProductorConsumidor
 {
-   public void ConsumirProducir(Buffer buffer1,Buffer buffer2, Semaphore s1, Semaphore s2,  Semaphore e1, Semaphore e2,  Semaphore n1, Semaphore n2)
+   public void ConsumirProducir(Buffer buffer1, Buffer buffer2, Semaphore s1, Semaphore s2,  Semaphore e1, Semaphore e2,  Semaphore n1, Semaphore n2)
    {
       
         while (true)
         {
+            n1.WaitOne();
+            s1.WaitOne();
+            int dato1 = buffer1.Extraer();
+            s1.Release();
+            e1.Release();
+            n1.WaitOne();
+            s1.WaitOne();
+            int dato2 = buffer1.Extraer();
+            s1.Release();
+            e1.Release();
             
-            n1.WaitOne();
-            s1.WaitOne();
-            int dato1 = buffer1.Devolver();
-            s1.Release();
-            e1.Release();
-            n1.WaitOne();
-            s1.WaitOne();
-            int dato2 = buffer1.Devolver();
-            s1.Release();
-            e1.Release();
+            int elemento = dato1+dato2; // Produce (asíncrono)
+            
             e2.WaitOne();
             s2.WaitOne();
-            int valor = dato1+dato2;
-            buffer2.Insert(valor);
-            Console.WriteLine("se inserto en el buffer 2 el numero {0}",valor);
+            buffer2.Insert(elemento);
+            Console.WriteLine("Se inserto en el buffer 2 el numero " + dato1 + " + " + dato2 + " = " + elemento);
             s2.Release();
             n2.Release();
-            Thread.Sleep(1000); // Tiempo de espera para evitar saturación
+            
+            Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
    }
 }
