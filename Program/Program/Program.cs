@@ -24,8 +24,8 @@
             // Crear y empezar hilos para productores y consumidores
             Thread t1 = new Thread(() => productor1.Producir(buffer1, s1, e1, n1));
             Thread t2 = new Thread(() => productor2.ElevarAlCuadrado(buffer1, s1, e1, n1));
-            Thread t3 = new Thread(() => consumidor1.Consumir(buffer2, s2, e2, n2));
-            Thread t4 = new Thread(() => consumidor2.ConsumirProducir(buffer1, buffer2,s1, s2, e1,e2,n1,n2));
+            Thread t3 = new Thread(() => consumidor2.ConsumirProducir(buffer1, buffer2, s1, s2, e1, e2, n1, n2));
+            Thread t4 = new Thread(() => consumidor1.Consumir(buffer2, s2, e2, n2));
 
             t1.Start();
             t2.Start();

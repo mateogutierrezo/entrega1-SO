@@ -21,7 +21,7 @@ public class ProductorCuadratico
             s.Release();
             n.Release();
             
-            Console.WriteLine("Se elevo " + dato + " al cuadrado y se inserto " + cuadrado);
+            //Console.WriteLine("Se elevo " + dato + " al cuadrado y se inserto " + cuadrado);
             Thread.Sleep(500); // Tiempo de espera para evitar saturation
         }
         

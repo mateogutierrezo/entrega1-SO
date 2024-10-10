@@ -26,7 +26,7 @@ public class ProductorConsumidor
             s2.Release();
             n2.Release();
             
-            Console.WriteLine("Se inserto en el buffer 2 el numero " + dato1 + " + " + dato2 + " = " + elemento);
+            //Console.WriteLine("Se inserto en el buffer 2 el numero " + dato1 + " + " + dato2 + " = " + elemento);
             Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
    }
