@@ -13,7 +13,7 @@ public class Productor
             buffer.Insert(elemento);
             s.Release();
             n.Release();
-            Thread.Sleep(1000); // Tiempo de espera para evitar saturación
+            Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
     }
 }
