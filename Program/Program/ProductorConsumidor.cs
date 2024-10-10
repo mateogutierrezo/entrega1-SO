@@ -23,10 +23,10 @@ public class ProductorConsumidor
             e2.WaitOne();
             s2.WaitOne();
             buffer2.Insert(elemento);
-            Console.WriteLine("Se inserto en el buffer 2 el numero " + dato1 + " + " + dato2 + " = " + elemento);
             s2.Release();
             n2.Release();
             
+            Console.WriteLine("Se inserto en el buffer 2 el numero " + dato1 + " + " + dato2 + " = " + elemento);
             Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
    }

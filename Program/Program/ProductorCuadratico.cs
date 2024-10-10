@@ -18,10 +18,10 @@ public class ProductorCuadratico
             e.WaitOne();
             s.WaitOne();
             buffer.Insert(cuadrado);
-            Console.WriteLine("Se elevo " + dato + " al cuadrado y se inserto " + cuadrado);
             s.Release();
             n.Release();
             
+            Console.WriteLine("Se elevo " + dato + " al cuadrado y se inserto " + cuadrado);
             Thread.Sleep(500); // Tiempo de espera para evitar saturation
         }
         

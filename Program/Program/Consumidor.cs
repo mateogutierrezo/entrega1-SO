@@ -8,10 +8,11 @@ public class Consumidor
         {
             n.WaitOne();
             s.WaitOne();
-            int value = buffer.Extraer();
+            int elemento = buffer.Extraer();
             s.Release();
             e.Release();
             
+            Console.WriteLine("Se extrajo " + elemento);
             Thread.Sleep(500); // Tiempo de espera para evitar saturación
         }
     }
